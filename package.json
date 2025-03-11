@@ -1,0 +1,26 @@
+{
+  "name": "primer-variables-and-strings",
+  "version": "1.0.0",
+  "description": "Kia ora and welcome! 🎉 Today, you’ll be introduced to **JavaScript** by learning about **variables** and **strings**.",
+  "main": "variablesAndStringsChallenge.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NGEN-Room/Primer-Variables-And-Strings.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NGEN-Room/Primer-Variables-And-Strings/issues"
+  },
+  "homepage": "https://github.com/NGEN-Room/Primer-Variables-And-Strings#readme",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
