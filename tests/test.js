@@ -1,42 +1,52 @@
-// test.js
-const { greeting, name, welcomeMessage, lowerCaseName, upperCaseName, nameLength, firstLetter, lastLetter, substringName, replacedName } = require('./variablesAndStringsChallenge');
+const { expect } = require("chai");
+const challenge = require("../variablesAndStringsChallenge");
 
-test('Challenge 1: greeting should be "Hello, World!"', () => {
-  expect(greeting).toBe("Hello, World!");
-});
+// Helper function to check if a variable exists
+function isDefined(variable) {
+  return typeof variable !== "undefined";
+}
 
-test('Challenge 2: name should be your name', () => {
-  expect(name).toBe("Your Name"); // Replace "Your Name" with the expected name
-});
+describe("\n🚀 JavaScript Variables & Strings Challenge", () => {
+  
+  it("myName should be a non-empty string", () => {
+    expect(isDefined(challenge.myName), "❌ myName is not defined!").to.be.true;
+    expect(challenge.myName, "❌ myName should be a string!").to.be.a("string").and.not.to.be.empty;
+  });
 
-test('Challenge 3: welcomeMessage should combine greeting and name', () => {
-  expect(welcomeMessage).toBe("Hello, World! Your Name");
-});
+  it("greeting should use 'myName' and be correctly formatted", () => {
+    expect(isDefined(challenge.greeting), "❌ greeting is not defined!").to.be.true;
+    expect(challenge.greeting, "❌ greeting should be a string!").to.be.a("string");
 
-test('Challenge 4: lowerCaseName should be name in lowercase', () => {
-  expect(lowerCaseName).toBe("your name"); // Replace with the expected lowercase name
-});
+    // Ensure greeting is exactly "Hello, my name is ___"
+    const expectedGreeting = `Hello, my name is ${challenge.myName}`;
+    expect(challenge.greeting, `❌ greeting should be: "${expectedGreeting}"`).to.equal(expectedGreeting);
+  });
 
-test('Challenge 5: upperCaseName should be name in uppercase', () => {
-  expect(upperCaseName).toBe("YOUR NAME"); // Replace with the expected uppercase name
-});
 
-test('Challenge 6: nameLength should be the length of name', () => {
-  expect(nameLength).toBe(8); // Replace with the expected length
-});
+  it("favoriteFood should be a non-empty string", () => {
+    expect(isDefined(challenge.favoriteFood), "❌ favoriteFood is not defined!").to.be.true;
+    expect(challenge.favoriteFood, "❌ favoriteFood should be a string!").to.be.a("string").and.not.to.be.empty;
+  });
 
-test('Challenge 7: firstLetter should be the first character of name', () => {
-  expect(firstLetter).toBe("Y"); // Replace with the expected first letter
-});
+  it("foodSentence should use 'favoriteFood' correctly", () => {
+    expect(isDefined(challenge.foodSentence), "❌ foodSentence is not defined!").to.be.true;
+    expect(challenge.foodSentence, "❌ foodSentence should be a string!").to.be.a("string");
 
-test('Challenge 8: lastLetter should be the last character of name', () => {
-  expect(lastLetter).toBe("e"); // Replace with the expected last letter
-});
+    // Ensure sentence format is exact
+    const expectedFoodSentence = `My favorite food is ${challenge.favoriteFood} and I love eating it!`;
+    expect(challenge.foodSentence, `❌ foodSentence should be: "${expectedFoodSentence}"`).to.equal(expectedFoodSentence);
+  });
 
-test('Challenge 9: substringName should be the first 3 characters of name', () => {
-  expect(substringName).toBe("You"); // Replace with the expected substring
-});
+  it("uppercaseGreeting should store 'greeting' in all uppercase", () => {
+    expect(isDefined(challenge.uppercaseGreeting), "❌ uppercaseGreeting is not defined!").to.be.true;
+    expect(challenge.uppercaseGreeting, "❌ uppercaseGreeting should be a string!").to.be.a("string");
+    expect(challenge.uppercaseGreeting, "❌ uppercaseGreeting should be in ALL CAPS!").to.equal(challenge.greeting.toUpperCase());
+  });
 
-test('Challenge 10: replacedName should replace "a" with "z"', () => {
-  expect(replacedName).toBe("Your Nzme"); // Replace with the expected replaced string
+  it("lowercaseFoodSentence should store 'foodSentence' in all lowercase", () => {
+    expect(isDefined(challenge.lowercaseFoodSentence), "❌ lowercaseFoodSentence is not defined!").to.be.true;
+    expect(challenge.lowercaseFoodSentence, "❌ lowercaseFoodSentence should be a string!").to.be.a("string");
+    expect(challenge.lowercaseFoodSentence, "❌ lowercaseFoodSentence should be in all lowercase!").to.equal(challenge.foodSentence.toLowerCase());
+  });
+
 });

@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/*.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/NGEN-Room/Primer-Variables-And-Strings#readme",
   "dependencies": {
-    "jest": "^29.7.0"
+    "chai": "^5.2.0",
+    "mocha": "^11.1.0"
   }
 }
