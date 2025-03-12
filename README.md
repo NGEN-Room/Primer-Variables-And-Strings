@@ -61,7 +61,12 @@ After finishing FreeCodeCamp, you’ll apply your knowledge in a **coding challe
 
 ---
 
-### 4️⃣ Save, Commit & Push
+### 4️⃣ Technical Blog
+1.	Fill out the techincal blog
+
+---
+
+### 5️⃣ Save, Commit & Push
 1.	Go back to GitHub Desktop
 2.	Review your changes under “Changes”
 3.	Write a commit message (e.g., "Completed variables and strings challenges")
