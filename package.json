@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha tests/*.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,9 @@
     "url": "https://github.com/NGEN-Room/Primer-Variables-And-Strings/issues"
   },
   "homepage": "https://github.com/NGEN-Room/Primer-Variables-And-Strings#readme",
-  "dependencies": {
-    "chai": "^5.2.0",
-    "mocha": "^11.1.0"
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
   }
 }
